@@ -18,11 +18,11 @@ for i in range(1,N+1):
 visit = [False] * (N + 1)
 
 def DFS(v):
-    visited[v] = True
+    visit[v] = True
     print(v,end= ' ')
     
     for i in graph[v]:
-        if not visited[i]:
+        if not visit[i]:
             DFS(i)
             
 DFS(V)            
