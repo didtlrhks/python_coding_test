@@ -25,4 +25,23 @@ def DFS(v):
         if not visit[i]:
             DFS(i)
             
-DFS(V)            
+
+visit = [False] * (N+1)
+
+    def BFS(v):
+        queue = deque([v])
+        visit[v] = True 
+        
+        while queue:
+            x = queue.popleft()
+            print(x, end = ' ')
+            
+            for i in graph[x]:
+                if not visit[i]:
+                    visit[i] = True
+                    queue.append(i)
+                    
+
+DFS(V)
+BFS(V)
+       
