@@ -11,17 +11,16 @@ for i in range(N+1):
     graph[S].append(E)
     graph[E].append(S)
     
-
 for i in range(1,N+1):
     graph[i].sort()
-
-
+    
 def DFS(v):
     visit[v] = True
     print(v,end = " ")
     for i in graph[v]:
         if not visit[i]:
-           DFS(i)
-        
+            DFS(i)
+            
 DFS(V)
-
+        
+    
