@@ -27,11 +27,10 @@ def DFS(n):
            count += 1
                
            DFS(i)
-           print(count) 
-
+    
 
 DFS(1)     
-           
+print(count)           
     
     
     
