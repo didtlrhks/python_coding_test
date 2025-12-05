@@ -21,12 +21,13 @@ def DFS(n):
     visit[n] = True
      
     
-    print(count)  
+     
     for i in graph[n]:
        if not visit[i]:
            count += 1
                
            DFS(i)
+           print(count) 
 
 
 DFS(1)     
