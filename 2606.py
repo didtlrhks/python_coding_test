@@ -4,7 +4,10 @@ N = int(input())
 M = int(input())
 graph = [[] for _ in range(N+1)]
 visit = [False] * (N+1)
-count = 0
+count = 0 
+
+
+
 
 
 for i in range(M):
@@ -14,17 +17,19 @@ for i in range(M):
     
 
 def DFS(n):
-     
+    global count
     visit[n] = True
-    print(count)
+     
+    
+    print(count)  
     for i in graph[n]:
        if not visit[i]:
            count += 1
-           
+               
            DFS(i)
 
 
-DFS(N)     
+DFS(1)     
            
     
     
