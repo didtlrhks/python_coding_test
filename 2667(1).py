@@ -32,5 +32,16 @@ def BFS(x,y):
     return count
                     
                 
+for i in range(N):
+    for j in range(N):
+        if graph[i][j] and not visit[i][j]:
+            result.append(BFS(i,j))
             
-               
+result.sort()
+
+
+print(len(result))   
+for r in result:
+    print(r)
+      
+       
