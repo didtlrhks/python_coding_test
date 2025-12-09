@@ -26,6 +26,27 @@ while queue:
         ny = y + dy[i]
         
     if 0 <= nx < N and 0 <= ny < N:
+        if not visit[nx][ny] and graph[nx][ny] == '1':
+            queue.append((nx,ny))
+            visit[nx][ny] = True
+            count += 1
+            
+return count 
+
+
+for i in range(N):
+    for j in range(N):
+        if not visit[i][j] and graph[i][j] == '1':
+            reuslt.append(BFS(i,j))
+        
+result.sort()
+
+
+print(len(result))   
+for r in result:
+    print(r)
+    
+        
         
     
     
