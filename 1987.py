@@ -25,5 +25,19 @@ def dfs(x,y,cnt):
         if 0 <= nx < R and 0 <= ny < C:
             idx = ord(board[nx][ny]) - ord('A')
             
+            if not used[idx]:
+                used[idx] = True
+                dfs(nx,ny,cnt + 1)
+                used[idx] = False
+                
+
+start_idx = ord(board[0][0]) - ord('A')
+used[start_idx] = True
+dfs(0,0,1)
+
+print(answer)
+            
+            
+            
         
         
