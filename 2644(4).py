@@ -15,12 +15,12 @@ for i in range(m):
     
     
 visited = [-1] * (n+1)
-queue = deque([a])
+queue = deque([q])
 visited[q] = 0
-
+        
 while queue:
-    cur = deque.popleft()
-    for i in garph[cur]:
+    cur = queue.popleft()
+    for i in graph[cur]:
         if visited[i] == -1:
             visited[i] = visited[cur] + 1 
             queue.append(i)
