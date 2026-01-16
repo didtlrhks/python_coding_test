@@ -1,5 +1,5 @@
 import sys
-import collections from deque
+
 
 n = input()
 tree = {}
@@ -24,9 +24,9 @@ def preorder(node):
 def inorder(node):
      if node == '.':
         return
-    preorder(tree[node][0])
+    inorder(tree[node][0])
     print(node, end = '')
-    preorder(tree[node][1])
+    inorder(tree[node][1])
     
     
     
@@ -39,8 +39,8 @@ def postorder(node):
      if node == '.':
         return
 
-    preorder(tree[node][0])
-    preorder(tree[node][1])
+    postorder(tree[node][0])
+    postorder(tree[node][1])
     print(node, end = '')
     
     
